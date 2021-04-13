@@ -1,10 +1,10 @@
 import React from 'react';
 import "./ServiceElements.css";
 
-function ServiceElements (props) {
+function ServiceElements ({onAddClick}) {
  return(
      <div className="service__elements" >
-         <button>Add</button>
+         <button onClick={onAddClick}>Add</button>
          <input type="search"/>
          <label htmlFor="sort">Sorted by:</label>
          <select name="sort" id="sort">

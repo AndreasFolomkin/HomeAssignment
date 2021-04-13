@@ -1,16 +1,16 @@
 import React from 'react';
 import "./ProductCard.css"
 
-function Card (props) {
+function Card({product, onClick}) {
 
- return(
-     <div className="Product__card" >
-         <img src="" alt="non image"/>
-         <h3>Product 1</h3>
-         <p>Product 1 description</p>
-         <button>Delete</button>
-     </div>
- )
+    return (
+        <div className="Product__card" onClick={() => onClick(product.id)}>
+            <img src={product.image} alt="non image"/>
+            <h3>{product.name}</h3>
+            <p>{product.description}</p>
+            <button>Delete</button>
+        </div>
+    )
 }
 
-export default Card ;
+export default Card;
